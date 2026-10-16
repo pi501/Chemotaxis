@@ -1,4 +1,22 @@
- class Bacteria    
+ Bacteria [] group = new Bacteria [30];
+ void setup()   
+ {     
+   size(500,500);
+   for (int i = 0; i <= group.length-1; i++)
+   {
+     group[i] = new Bacteria();
+   }
+ }   
+ void draw()   
+ {    
+   background(255,255,255);
+   for (int i = 0; i <= group.length-1; i++)
+   {
+     group[i].show();
+     group[i].move();
+   }
+ }  
+class Bacteria    
  {     
    int mysize;
    int myX;
